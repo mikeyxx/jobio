@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  background-color: rgba(216, 247, 247, 0.2);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.widthStyle {
+  width: calc(100% - 30px);
+}
+
+.createErrorMsg {
+  width: calc(100% - 30px);
+}
+
+@layer components {
+  .dropdownProfile {
+    @apply absolute top-[4.5rem] right-[1rem] w-[150px] p-[15px] rounded-[15px] bg-white border border-[gray];
+  }
+  .dropdownProfile::before {
+    content: "";
+    @apply absolute top-[-0.6rem] right-[2rem] w-[20px] h-[20px]
+      bg-white rotate-[45deg] border-l border-l-[gray] border-t border-t-[gray];
+  }
+  input[type="text"] {
+    @apply bg-blue-50 rounded-lg active:outline-0 focus:outline-0 h-10 p-2;
+  }
+  input[type="email"] {
+    @apply bg-blue-50 rounded-lg active:outline-0 focus:outline-0 h-10 p-2;
+  }
+  input[type="number"] {
+    @apply bg-blue-50 rounded-lg active:outline-0 focus:outline-0 h-10 p-2;
+  }
+  input[type="password"] {
+    @apply bg-blue-50 rounded-lg active:outline-0 focus:outline-0 h-10 p-2;
+  }
+  input[type="radio"] {
+    @apply pl-4;
+  }
+  textarea {
+    @apply bg-blue-50 rounded-lg active:outline-0 focus:outline-0 p-2 resize-none h-32;
+  }
+}
