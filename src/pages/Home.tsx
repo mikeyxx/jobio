@@ -90,7 +90,9 @@ const Home = () => {
   return (
     <>
       <header>
+        <nav>
         <NavBar />
+        </nav>
       </header>
       <main className="m-auto overflow-hidden">
         {screenSize > 1000 ? (
